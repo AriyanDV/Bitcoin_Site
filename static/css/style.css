@@ -1,0 +1,491 @@
+@import url("font.css");
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Itim', cursive;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),url('../img/bitcoin-site-header.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.center-content {
+    max-width: 1200px;
+    margin: auto;
+}
+
+div.nav-items {
+    display: flex;
+    padding: 50px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+div.nav-items > h2.logo {
+    font-family: 'Mochiy Pop P One', sans-serif;
+    margin: 0 25px;
+}
+
+h2.logo > a {
+    color: white;
+}
+
+h2.logo > a {
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+h2.logo > a img,h2.logo > a span {
+    margin: 0 5px;
+}
+
+button.btn-menu {
+    display: none;
+}
+
+span.yell-txt {
+    color: orange;
+}
+
+ul.nav-links-group {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+a.nav-link {
+    font-size: 18px;
+    font-weight: bold;
+    border: 1px solid #e1e1e1ad;
+    padding: 5px;
+    border-radius: 6px;
+    color: #e1e1e1ad;
+    transition: .250s all;
+    margin: 0 25px;
+}
+
+a.nav-link:hover {
+    border: 1px solid white;
+    color: white;
+}
+
+a.login-link {
+    background: none;
+    border: 1px solid #ffa600;
+    padding: 5px 20px;
+    transition: .250s all;
+}
+
+a.login-link:hover {
+    color: rgb(0, 0, 0);
+    background: #ffa600;
+    border: 1px solid#ffa600;
+}
+
+div.header-welcome {
+    width: 500px;
+    color: white;
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%,0);
+}
+
+div.header-welcome > h2 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+div.header-welcome > p {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+div.btns button {
+    width: 150px;
+    padding: 7px 0;
+    margin: 0 7px;
+    border: none;
+    outline: none;
+    background: none;
+    color: white;
+    font-size: 15px;
+    border-radius: 12px;
+    cursor: pointer;
+    position: relative;
+}
+
+div.btns button span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    border-radius: 9px;
+    z-index: -1;
+    transition: .200s;
+}
+
+div.btns button:first-child {
+    border: 2px solid #008cc6;
+}
+
+div.btns button:first-child:hover span {
+    background-color: #008cc6;
+    width: 100%;
+}
+
+div.btns button:last-child {
+    border: 2px solid tomato;
+}
+
+div.btns button:last-child:hover span {
+    background-color: tomato;
+    width: 100%;
+}
+
+main {
+    background-color: #0c0c0c;
+    width: 100%;
+    padding-top: 25px;
+    box-shadow: inset 11px 11px 9px #050505,
+            inset -11px -11px 9px #131313;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+div.cards-group {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+div.card {
+    width: 575px;
+    height: 200px;
+    background-color: #101010;
+    margin: 25px 0;
+    border-radius: 0 10px 10px 0;
+    overflow: hidden;
+}
+
+div.card img {
+    width: 50%;
+    height: 100%;
+    float: left;
+    border-radius: 10px 0 0 10px;
+}
+
+div.card div {
+    width: 50%;
+    padding: 5px 5px 5px 10px;
+    float: right;
+    color: #d9d9d9;
+    font-size: 17px;
+    text-align: center;
+}
+
+div.part2 {
+    width: 100%;
+    background-color: #101010;
+    margin-top: 25px;
+}
+
+div.tutorials {
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+div.tutorial {
+    width: 300px;
+    color: white;
+    border: 1px solid #b36b36;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+div.tutorial h3 {
+    text-align: center;
+    margin: 10px 0;
+}
+
+div.tutorial button {
+    border: none;
+    outline: none;
+    background: none;
+    width: 100%;
+    color: white;
+    margin-top: 10px;
+    padding: 10px 0;
+    border-top: 1px solid #b36b36;
+    font-size: 14px;
+}
+
+div.tutorial , div.tutorial button {
+    cursor: pointer;
+}
+
+div.icon-box {
+    width: 75px;
+    height: 75px;
+    background: #b36b36;
+    font-size: 30px;
+    text-align: center;
+    padding: 20px 0;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 10px;
+    transition: .600s all;
+}
+
+div.tutorial:hover > div.icon-box {
+    transform: translate(0, -20px);
+}
+
+div.tutorial-content {
+    padding: 0 10px;
+}
+
+.footer-image {
+    background-image: url("../img/footer.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 200px;
+    background-color: #101010;
+}
+
+footer {
+    width: 100%;
+    background: #0c0c0c;
+    color: white;
+    padding: 0 30px;
+    padding-bottom: 75px;
+    position: absolute;
+    z-index: 100;
+}
+
+footer h3 {
+    margin: 10px 0;
+}
+
+div.footer-content > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+div.footer-about {
+    width: 400px;
+}
+
+div.footer-content > div > img {
+    width: 100px;
+}
+
+div.footer-content > div > div > ul {
+    display: flex;
+    list-style: none;
+}
+
+div.footer-content > div > div > ul > li {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+div.footer-content > div > div > ul > li:hover {
+    color: #ffa600;
+}
+
+div.footer-content > div > div > ul > li:first-child {
+    margin: 0;
+}
+
+hr {
+    border: none;
+    border-top: 2px dashed rgb(153, 153, 153);
+}
+
+div.footer-content > p {
+    text-align: center;
+    color: rgb(153, 153, 153);
+}
+
+@media only screen and (max-width: 1150px) {
+    div.card {
+        width: 700px;
+    }
+
+    p.card-description {
+        text-align: start;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    div.card {
+        width: 80%;
+        max-width: 700px;
+        min-width: 650px;
+    }
+    
+    div.footer-content > div > img {
+        display: none;
+    }
+    
+}
+
+@media only screen and (max-width: 700px) {
+    button.btn-menu {
+        width: 50px;
+        height: 50px;
+        background: none;
+        outline: none;
+        border: none;
+        position: relative;
+        display: block;
+        margin-right: 39px;
+        cursor: pointer;
+        z-index: 2;
+    }
+    
+    button.btn-menu span {
+        width: 75%;
+        height: 3px;
+        background-color: white;
+        position: absolute;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    
+    button.btn-menu span:first-child {
+        top: 40%;
+    }
+    
+    button.btn-menu span:last-child {
+        top: 60%;
+    }
+
+    ul.nav-links-group {
+        display: none;
+        position: absolute;
+        width: 75%;
+        height: 100%;
+        top: 0;
+        flex-direction: column;
+        z-index: 1;
+        background: #050505;
+    }
+
+    ul.nav-links-group > a.nav-link {
+        width: 100%;
+        border: none;
+        border-radius: unset;
+        margin: unset;
+        padding: 10px 0;
+        padding-left: 15px;
+    }
+
+    button.open-menu span:first-child {
+        transform: rotate(-40deg) translate(-50%);
+        top: 15%;
+    }
+
+    button.open-menu span:last-child {
+        transform: rotate(40deg) translate(-50%);
+        top: 65%;
+    }
+
+    button.open-menu ~ ul.nav-links-group {
+        display: flex;
+    }
+
+    div.card {
+        height: 150px;
+        width: 85%;
+        max-width: 550px;
+        min-width: 400px;
+    }
+
+    p.card-description {
+        font-size: 17px;
+    }
+
+    div.footer-image {
+        display: none;
+    }
+
+    footer {
+        padding-bottom: 30px;
+    }
+
+    div.footer-content > div {
+        flex-direction: column;
+    }
+
+    div.footer-content > div div {
+        margin: 15px 0;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    div.tutorials > div.tutorial:last-child {
+        margin-bottom: 50px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    div.header-welcome {
+        width: 85%;
+    }
+
+    div.btns button {
+        margin: 5px 7px;
+    }
+
+    div.card {
+        width: 80%;
+        border-radius: 0 0 10px 10px;
+        margin: 10px 0;
+        overflow: visible;
+        height: unset;
+        min-width: unset;
+    }
+
+    div.card > img {
+        width: 100%;
+        height: unset;
+        float: none;
+        border-radius: 10px 10px 0 0;
+    }
+
+    div.card > div {
+        width: unset;
+        float: none;
+        padding: 10px;
+    }
+
+    div.footer-about {
+        width: 250px;
+        text-align: center;
+    }
+}
